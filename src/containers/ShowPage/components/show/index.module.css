@@ -1,0 +1,57 @@
+@import '../../../../colors.css';
+
+.container {
+}
+
+.title {
+  margin-bottom: 20px;
+}
+
+.posterImage {
+  min-height: 295px;
+  min-width: 210px;
+  background-color: var(--background-dark);
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+}
+
+.summaryContainer {
+  border-radius: 5px;
+  box-shadow: var(--box-shadow);
+  margin: 10px;
+  padding: 10px;
+}
+
+.episodeContainer {
+  margin: 10px;
+  margin-top: 30px;
+  padding: 10px;
+  display: grid;
+  grid-row-gap: 10px;
+}
+
+.episode {
+  padding: 10px;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.episodeNumber {
+  color: var(--text-on-primary-faded);
+}
+
+.secondGlance {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 10px;
+}
+
+.tableHead {
+  font-weight: bold;
+}
+.tableNumber {
+  text-align: right;
+}

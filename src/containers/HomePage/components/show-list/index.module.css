@@ -1,0 +1,23 @@
+@import '../../../../colors.css';
+
+.listContainer {
+  margin-top: 50px;
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 15px;
+}
+
+.itemContainer {
+  border-radius: 5px;
+  padding: 14px 10px;
+  box-shadow: var(--box-shadow);
+  transition: all var(--transition);
+  transition-property: background-color color;
+}
+.itemContainer:hover {
+  background-color: var(--secondary-light);
+  color: var(--text-on-secondary);
+}
+.itemContainer:active {
+  background-color: var(--secondary);
+}

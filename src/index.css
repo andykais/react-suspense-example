@@ -1,0 +1,47 @@
+@import './colors.css';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--background);
+  font-family: sans-serif;
+  color: var(--text-on-primary);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-on-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+input {
+  border: none;
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 5px 0;
+  width: calc(100% - 20px);
+}
+button {
+  border: none;
+}
+
+/* #app-root */
+body > div {
+  margin: 0 10px;
+  margin-top: 20px;
+}
