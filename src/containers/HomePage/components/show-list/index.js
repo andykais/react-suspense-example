@@ -1,5 +1,4 @@
 import * as React from 'react'
-import { DateTime } from 'luxon'
 import { unstable_createResource as createResource } from 'react-cache'
 import * as styles from './index.module.css'
 import { searchShowsFromString } from '../../../../api'

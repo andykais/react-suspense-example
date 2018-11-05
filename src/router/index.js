@@ -2,17 +2,15 @@ import * as React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { routes } from './routes'
 
-const RouteContainer = ({ route }) => (
-  <Route {...route} />
-  // <Route path={route.path} exact={route.exact} component={route.component} render={route.render} />
-)
+const basename = process.env.NODE_ENV === 'production' ? '/react-suspense-example/' : '/'
+console.log({ basename })
 
 export const Router = () => (
-  <BrowserRouter>
-    <div>
+  <BrowserRouter basename={basename}>
+    <Switch>
       {routes.map((route, i) => (
-        <RouteContainer key={i} route={route} />
+        <Route key={i} {...route} />
       ))}
-    </div>
+    </Switch>
   </BrowserRouter>
 )

@@ -1,8 +1,10 @@
 const { resolve } = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
-module.exports = {
+module.exports = (env, { mode }) => ({
   target: 'web',
   devtool: 'cheap-module-source-map',
   devServer: {
@@ -14,7 +16,7 @@ module.exports = {
     filename: '[name].bundle.js',
     chunkFilename: '[name].bundle.js',
     path: resolve(__dirname, 'dist'),
-    publicPath: '/'
+    publicPath: mode === 'production' ? '/react-suspense-example/' : '/'
   },
   module: {
     rules: [
@@ -59,5 +61,8 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: './src/index.html' })]
-}
+  plugins: [
+    new HtmlWebpackPlugin({ template: './src/index.html' })
+    // new webpack.EnvironmentPlugin({ NODE_ENV: 'development' })
+  ]
+})
